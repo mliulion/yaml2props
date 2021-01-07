@@ -75,7 +75,8 @@ for line in lines:
 file_path = args.file + '.properties'
 
 # For debug output
-print(output) 
+#print(output) 
+print(re.sub(r'\n+', '\n', output))
 
 #print('\nSave to file : ' + file_path)
  
