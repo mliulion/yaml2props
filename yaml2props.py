@@ -14,7 +14,7 @@ parser.add_argument('file', help = 'Path of YAML file')
 
 args = parser.parse_args()
 
-print('YAML File : %s' % args.file)
+#print('YAML File : %s' % args.file)
 
 if not os.path.isfile(args.file):
     raise ValueError(args.file + ' is not file')
@@ -72,16 +72,16 @@ for line in lines:
         output += p
 
 # Prepare write file
-file_path = re.sub(r'\..+$', '.properties', args.file)
+file_path = args.file + '.properties'
 
 # For debug output
-#print(output) 
+print(output) 
 
-print('\nSave to file : ' + file_path)
+#print('\nSave to file : ' + file_path)
  
  # Write file
-file_props = open(file_path,'w+')
-file_props.write(re.sub(r'\n\n\n+', '\n\n', output))
-file_props.close()
+#file_props = open(file_path,'w+')
+#file_props.write(re.sub(r'\n\n\n+', '\n\n', output))
+#file_props.close()
 
-print('Done!')
+#print('Done!')
