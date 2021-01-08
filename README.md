@@ -22,3 +22,13 @@ $ yaml2props {your_path_file}
 ```
 
 You can try with _sample.yaml_ as example file.
+
+
+## Fast use
+
+```sh
+python3 <(curl -s https://raw.githubusercontent.com/mliulion/yaml2props/master/yaml2props.py?$(date +%s)) \
+  THE_PATH_TO_MY_YAML_FILE | \
+  sort
+
+```
